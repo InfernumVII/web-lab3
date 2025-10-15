@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:ui="jakarta.faces.facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="jakarta.faces.core">
+
+<h:head>
+    <title>web-lab3</title>
+    <h:outputStylesheet library="css" name="first-page-styles.css"/>
+    <h:outputScript library="js" name="script.js"/>
+</h:head>
+<h:body>
+    <div class="particles" id="particles"></div>
+    <div id="header">
+        <h:head>
+            <h:outputStylesheet library="css" name="header-styles.css"/>
+        </h:head>
+        <div class="header-item" id="full-name">ФИО: Швецов Егор Максимович</div>
+        <div class="header-item" id="group-number">Номер группы: P3206</div>
+        <div class="header-item" id="variant">Вариант: 468074</div>
+    </div>
+    <div id="content">
+        <h:head>
+            <h:outputStylesheet library="css" name="content-styles.css"/>
+        </h:head>
+        <div class="clock">
+            <h:form>
+                <div class="current-date">
+                    <h:outputText id="current-date" value="Текущее время: #{clockView.currentDate}"/>
+                </div>
+                <p:poll interval="8" listener="#{clockView.updateDate}" update="current-date" />
+            </h:form>
+        </div>
+        <h:button id="to-main-page" outcome="main" value="-->"/>
+        
+    </div>
+</h:body>
+
+</html>

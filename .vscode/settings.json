@@ -1,3 +1,5 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "faces-intellisense.facesVersion": "jakarta-faces-4.1",
+    "faces-intellisense.primeVersion": "primefaces-15.0.0",
 }

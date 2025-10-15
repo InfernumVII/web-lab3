@@ -1,0 +1,29 @@
+.clock {
+    text-align: center;
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid rgba(110, 58, 255, 0.2);
+    border-radius: 8px;
+    animation: pulse 2s infinite;
+}
+.current-date {
+    margin: 4px;
+    font-size: 30px;
+    color: transparent;
+    background-clip: text;
+    background: linear-gradient(45deg, #6e3aff, #ff3864);
+    -webkit-background-clip: text; 
+}
+#to-main-page {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+
+    width: 7vw;
+    background: linear-gradient(45deg, #6e3aff, #ff3864);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transform: translateY(0);
+    transition: transform 0.3s;
+}
