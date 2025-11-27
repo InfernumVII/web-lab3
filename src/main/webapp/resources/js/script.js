@@ -18,4 +18,43 @@ function createParticles() {
     }
 }
 
+
+
+
+function applyServerTime(args) {
+    if (!args || !args.serverTime) return;
+
+    const date = new Date(args.serverTime);
+
+    const secondHand = document.querySelector('.secondHand');
+    const minuteHand = document.querySelector('.minuteHand');
+    const hourHand = document.querySelector('.hourHand');
+
+    const second = date.getSeconds();
+    const secondDeg = ((second / 60) * 360);
+    
+    if (second < 8) { 
+         secondHand.style.transition = 'none';
+    } else {
+         secondHand.style.transition = 'all 0.4s cubic-bezier(0.1, 2.7, 0.58, 1)';
+    }
+    secondHand.style.transform = `rotate(${secondDeg}deg)`;
+
+    const minute = date.getMinutes();
+    const minuteDeg = ((minute / 60) * 360) + ((second / 60) * 6);
+    minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+
+    const hour = date.getHours();
+    const hourDeg = ((hour / 12) * 360) + ((minute / 60) * 30);
+    hourHand.style.transform = `rotate(${hourDeg}deg)`;
+}
+
+setInterval(function() {
+    updateClockFromServer(); 
+}, 8000);
+
+window.onload = function() {
+    updateClockFromServer();
+};
+
 window.addEventListener('load', createParticles);

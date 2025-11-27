@@ -25,13 +25,30 @@
         <h:head>
             <h:outputStylesheet library="css" name="content-styles.css"/>
         </h:head>
+        <h:form>
+            <p:remoteCommand name="updateClockFromServer" 
+                             action="#{clockView.getServerTime}" 
+                             oncomplete="applyServerTime(args)" />
+        </h:form>
         <div class="clock">
-            <h:form>
-                <div class="current-date">
-                    <h:outputText id="current-date" value="Текущее время: #{clockView.currentDate}"/>
-                </div>
-                <p:poll interval="8" listener="#{clockView.updateDate}" update="current-date" />
-            </h:form>
+            <div class="hourHand"></div>
+            <div class="minuteHand"></div>
+            <div class="secondHand"></div>
+            <div class="center"></div>
+            <ul>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+                <li><span>7</span></li>
+                <li><span>8</span></li>
+                <li><span>9</span></li>
+                <li><span>10</span></li>
+                <li><span>11</span></li>
+                <li><span>12</span></li>
+            </ul>
         </div>
         <h:button id="to-main-page" outcome="main" value="-->"/>
         
