@@ -1,0 +1,11 @@
+<jboss-deployment-structure>
+    <deployment>
+        <dependencies>
+            <!-- Разрешаем видеть Hibernate (исправляет NoClassDefFoundError: HibernateProxy) -->
+            <module name="org.hibernate" export="true"/>
+            
+            <!-- Разрешаем видеть ByteBuddy (нужен для работы прокси Hibernate) -->
+            <module name="net.bytebuddy" export="true"/>
+        </dependencies>
+    </deployment>
+</jboss-deployment-structure>

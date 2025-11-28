@@ -1,0 +1,141 @@
+svg {
+    border: 1px solid white;
+}
+svg text {
+    font: italic 13px arial;
+    fill: white
+}
+
+fieldset {
+    display: block;
+    width: fit-content;
+    border: 1px solid white; 
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+legend {
+    color: white; 
+    font-family: sans-serif;
+}
+
+.radio-group td {
+    padding-right: 10px;
+}
+.radio-group label {
+    color: white;
+    margin-left: 3px;
+    font-family: sans-serif;
+}
+
+.custom-input.ui-inputtext {
+    background: transparent !important;
+    border: 1px solid white !important; 
+    color: white !important;
+    box-shadow: none !important;
+    width: 150px;
+}
+
+.custom-input.ui-inputtext:focus {
+    border: 1px solid #6e3aff !important;
+    box-shadow: 0 0 5px #6e3aff !important;
+}
+
+.custom-slider .ui-slider-handle {
+    background: linear-gradient(45deg, #6e3aff, #ff3864) !important;
+    border: none !important;
+    border-radius: 50%;
+}
+.custom-slider.ui-slider-horizontal {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    height: 6px;
+}
+
+.error-message {
+    color: #DC143C;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+.figures {
+    fill: #3399FF;
+}
+.point {
+    fill: red;
+}
+#point-last {
+    fill: green;
+}
+.gradient-button.ui-button {
+    margin-top: 10px;
+    background: linear-gradient(45deg, #6e3aff, #ff3864) !important;
+    border: none !important;
+    border-radius: 5px !important;
+    color: white !important;
+    width: 100px;
+    transition: transform 0.3s !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.gradient-button.ui-button span {
+    padding: 0; 
+    line-height: 30px;
+}
+
+
+.gradient-button.ui-button:hover,
+.gradient-button.ui-button.ui-state-hover {
+    background: linear-gradient(45deg, #6e3aff, #ff3864) !important;
+    transform: translateY(-5px);
+    border: none !important;
+    box-shadow: 0 5px 15px rgba(110, 58, 255, 0.4) !important;
+}
+
+
+.gradient-button.ui-button:disabled,
+.gradient-button.ui-button.ui-state-disabled {
+    background: linear-gradient(45deg, #412296, #96213A) !important;
+    opacity: 0.7 !important;
+    cursor: default !important;
+    transform: none !important;
+}
+.chart {
+    width: fit-content;
+}
+#info-table {
+    width: fit-content;
+    margin-left: 10px;
+}
+#info-table table, th, td {
+    border:1px solid white;
+    max-width: 60vw;
+    min-width: 5vw;
+    word-break: break-all;
+}
+.first-row {
+    display: flex;
+}
+
+#to-welcome-page {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 20px;
+
+    width: 5vw;
+    /* height: 4vh; */
+    background: linear-gradient(45deg, #6e3aff, #ff3864);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transform: translateY(0);
+    transition: transform 0.3s;
+}
+
+#to-welcome-page:hover {
+    transform: translateY(-5px);
+}
